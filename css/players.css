@@ -1,0 +1,44 @@
+/* ============================================================
+   PLAYER STATS — Retro Grey-Green UI
+============================================================ */
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-top: 24px;
+}
+
+.players-card {
+    background: var(--bg-mid);
+    border: 2px solid var(--border-mid);
+    border-radius: var(--radius);
+    padding: 24px;
+
+    text-align: center;
+
+    box-shadow:
+        inset 0 0 12px var(--shadow-hard),
+        0 0 6px var(--shadow-medium);
+}
+
+.players-value {
+    font-family: var(--font-tech);
+    font-size: 36px;
+    color: var(--accent-3);
+    margin-bottom: 12px;
+
+    text-shadow: 0 0 6px rgba(160,220,160,0.4);
+}
+
+.players-label {
+    font-family: var(--font-main);
+    font-size: 15px;
+    color: var(--text-mid);
+}
+
+@media (max-width: 900px) {
+    .players-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

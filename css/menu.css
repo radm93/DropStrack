@@ -1,0 +1,45 @@
+/* ============================================================
+   MAIN MENU — Retro Grey-Green UI
+============================================================ */
+
+.main-menu {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+
+    width: 100%;
+    max-width: 1320px;     /* ← mismo ancho que el resto */
+    margin: 25px auto 35px auto;   /* ← centrado */
+
+    flex-wrap: wrap;
+}
+
+
+/* Button */
+.menu-button {
+    background: var(--bg-mid);
+    border: 2px solid var(--border-mid);
+
+    padding: 12px 22px;
+    border-radius: var(--radius);
+
+    font-family: var(--font-main);
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--text-light);
+
+    box-shadow: 0 0 6px rgba(0,0,0,0.4);
+    transition: var(--transition-fast);
+}
+
+.menu-button:hover {
+    background: var(--bg-light);
+    border-color: var(--accent-2);
+    color: var(--accent-3);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 5px rgba(150,220,150,0.25);
+}

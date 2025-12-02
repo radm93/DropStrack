@@ -1,0 +1,69 @@
+/* ===========================================================
+   STEAM 2003 SCROLLBAR — SOLO PARA .cases-grid
+=========================================================== */
+
+/* ACTIVAR SCROLL SOLO EN EL GRID */
+.cases-grid {
+    max-height: 300px;       /* Ajustalo como quieras */
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+/* WIDTH de la barra */
+.cases-grid::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* TRACK */
+.cases-grid::-webkit-scrollbar-track {
+    background: #3d4040;                 /* Gris oscuro */
+    border-left: 2px solid #2b2d2d;
+    border-right: 2px solid #2b2d2d;
+}
+
+/* THUMB */
+.cases-grid::-webkit-scrollbar-thumb {
+    background: #707471;                 /* Gris medio */
+    border: 2px solid #2e2f2f;
+    border-radius: 0;
+}
+
+.cases-grid::-webkit-scrollbar-thumb:hover {
+    background: #828684;
+}
+
+/* ===========================================
+   BOTÓN SUPERIOR (flecha hacia arriba)
+=========================================== */
+.cases-grid::-webkit-scrollbar-button:single-button:vertical:decrement {
+    height: 22px;
+    background: #5d615f;
+    border: 2px solid #2b2d2d;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'>
+<polygon points='5,2 2,7 8,7' fill='white'/>
+</svg>");
+}
+
+/* ===========================================
+   BOTÓN INFERIOR (flecha hacia abajo)
+=========================================== */
+.cases-grid::-webkit-scrollbar-button:single-button:vertical:increment {
+    height: 22px;
+    background: #5d615f;
+    border: 2px solid #2b2d2d;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'>
+<polygon points='2,3 8,3 5,8' fill='white'/>
+</svg>");
+}
+
+.cases-grid::-webkit-scrollbar-button {
+    display: block;
+}

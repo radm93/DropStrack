@@ -1,0 +1,65 @@
+/* ===========================================
+   STEAM 2003 SCROLLBAR — EXACTO A LA IMAGEN
+=========================================== */
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* TRACK (fondo donde se mueve la barra) */
+::-webkit-scrollbar-track {
+    background: #3d4040;       /* gris oscuro de fondo */
+    border-left: 2px solid #2b2d2d;
+    border-right: 2px solid #2b2d2d;
+}
+
+/* THUMB (la parte que se arrastra) */
+::-webkit-scrollbar-thumb {
+    background: #707471;       /* gris exacto del thumb */
+    border: 2px solid #2e2f2f; 
+    border-radius: 0;
+}
+
+/* HOVER del thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: #828684;
+}
+
+/* ===========================================
+   BOTONES ARRIBA / ABAJO (flechas)
+=========================================== */
+
+/* BOTÓN ARRIBA */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    height: 22px;
+    background: #5d615f;       /* gris exacto de la flecha */
+    border: 2px solid #2b2d2d;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Triangulito blanco hacia arriba */
+    background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'>
+<polygon points='5,2 2,7 8,7' fill='white'/>
+</svg>");
+}
+
+/* BOTÓN ABAJO */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    height: 22px;
+    background: #5d615f;
+    border: 2px solid #2b2d2d;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Triangulito blanco hacia abajo */
+    background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'>
+<polygon points='2,3 8,3 5,8' fill='white'/>
+</svg>");
+}
+
+/* Para que los botones siempre estén visibles */
+::-webkit-scrollbar-button {
+    display: block;
+}

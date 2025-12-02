@@ -1,0 +1,138 @@
+/* ============================================================
+   RESPONSIVE.CSS — Steam 2003 Retro Unified
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   TABLETS GRANDES / NOTEBOOKS (<=1200px)
+------------------------------------------------------------ */
+@media (max-width: 1200px) {
+
+    section {
+        padding: 16px;
+    }
+
+    .container {
+        padding: 0 14px;
+    }
+}
+
+/* ------------------------------------------------------------
+   TABLETS (<=992px)
+------------------------------------------------------------ */
+@media (max-width: 992px) {
+
+    /* Sidebar pasa abajo */
+    #sidebar {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .sidebar-title,
+    .sidebar-link,
+    .sidebar-sublink {
+        text-align: center;
+    }
+
+    /* Grids estándar pasan a 2 columnas */
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ------------------------------------------------------------
+   TABLETS VERTICALES / PHABLETS (<=768px)
+------------------------------------------------------------ */
+@media (max-width: 768px) {
+
+    /* Header más compacto */
+    .header-logo {
+        font-size: 26px;
+    }
+
+    /* Timer boxes más chicos */
+    .timer-box {
+        padding: 10px;
+        min-width: 75px;
+    }
+
+    .timer-box .value {
+        font-size: 22px;
+    }
+
+    /* Updates → 2 columnas */
+    .updates-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    /* FAQ */
+    .faq-question {
+        font-size: 18px;
+    }
+
+    .faq-answer {
+        font-size: 14px;
+    }
+}
+
+/* ------------------------------------------------------------
+   SMARTPHONES GRANDES (<=600px)
+------------------------------------------------------------ */
+@media (max-width: 600px) {
+
+    /* Títulos centrados y más compactos */
+    .block-title {
+        font-size: 22px;
+    }
+
+    /* Updates → 1 columna */
+    .updates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .update-card {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    /* FAQ → 1 columna */
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contadores → 1 columna */
+    .counter-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ------------------------------------------------------------
+   SMARTPHONES PEQUEÑOS (<=420px)
+------------------------------------------------------------ */
+@media (max-width: 420px) {
+
+    .header-logo {
+        font-size: 22px;
+    }
+
+    .timer-box {
+        padding: 8px;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .timer-box .value {
+        font-size: 20px;
+    }
+
+    .update-btn {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+
+    .faq-counter-card {
+        width: 85%;
+        margin: 0 auto;
+    }
+}

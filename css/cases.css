@@ -1,0 +1,280 @@
+/* ============================================================
+   CASES.CSS — Steam 2003 Retro Green-Grey Market Grid (FINAL)
+============================================================ */
+
+/* WRAPPER */
+#cases-section-wrapper {
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* PANEL INTERNO LIMITADO A 2 FILAS */
+#cases-section {
+    /*max-height: 470px; /* Altura visible */
+    overflow: hidden;  /* Nada se escapa */
+    position: relative;
+    padding-bottom: 20px;
+}
+
+/* ============================================================
+   FILTER BAR
+============================================================ */
+.cases-filters {
+    display: flex;
+    gap: 20px;
+    padding: 18px;
+    margin: 12px 0 28px 0;
+
+    background: var(--bg-light);
+    border: 2px solid var(--border-mid);
+    border-radius: var(--radius);
+
+    box-shadow:
+        inset 0 0 6px var(--shadow-medium),
+        0 0 4px var(--shadow-soft);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.filter-group.full {
+    flex: 1;
+}
+
+.cases-filters label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    color: var(--text-mid);
+}
+
+.cases-filters select,
+.cases-filters input {
+    background: var(--bg-mid);
+    color: var(--text-light);
+
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius);
+
+    padding: 8px 10px;
+    font-size: 14px;
+    font-family: var(--font-main);
+
+    box-shadow: inset 0 0 4px var(--shadow-medium);
+    transition: var(--transition-fast);
+}
+
+.cases-filters select:hover,
+.cases-filters input:hover {
+    border-color: var(--accent-2);
+}
+
+.cases-filters input::placeholder {
+    color: var(--text-soft);
+}
+
+/* Responsive Filters */
+@media (max-width: 900px) {
+    .cases-filters {
+        flex-direction: column;
+    }
+
+    .filter-group,
+    .filter-group.full {
+        width: 100%;
+    }
+}
+
+/* ============================================================
+   GRID (5 CAJAS POR FILA, 2 FILAS visibles)
+============================================================ */
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    margin-top: 18px;
+
+    max-height: 520px;
+    overflow-y: auto; /* scroll interno visible */
+    overflow-x: hidden;
+
+    padding-right: 6px;
+    background: var(--green-dark);
+}
+
+/* ============================================================
+   SCROLLBAR ESTILO STEAM 2003
+============================================================ */
+.cases-grid::-webkit-scrollbar {
+    width: 14px;
+    background: #2b2f2e;
+}
+
+.cases-grid::-webkit-scrollbar-thumb {
+    background: #6c726f;
+    border: 2px solid #2b2f2e;
+    border-radius: 2px;
+}
+
+.cases-grid::-webkit-scrollbar-thumb:hover {
+    background: #7e8582;
+}
+
+.cases-grid::-webkit-scrollbar-button:single-button {
+    height: 14px;
+    background: #3c4040;
+    border: 1px solid #2b2f2e;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Flecha arriba */
+.cases-grid::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpolygon points='0,6 5,0 10,6' fill='%23c9d0cd'/%3E%3C/svg%3E");
+}
+
+/* Flecha abajo */
+.cases-grid::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpolygon points='0,0 5,6 10,0' fill='%23c9d0cd'/%3E%3C/svg%3E");
+}
+
+/* Firefox */
+.cases-grid {
+    scrollbar-color: #6c726f #2b2f2e;
+    scrollbar-width: 10px;
+}
+
+/* Responsive Grid Breakpoints */
+@media (max-width: 1400px) {
+    .cases-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 1100px) {
+    .cases-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 850px) {
+    .cases-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+    .cases-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   CASE CARD
+============================================================ */
+.case-card {
+    background: var(--bg-light);
+    border: 2px solid var(--border-mid);
+    border-radius: var(--radius);
+    overflow: hidden;
+
+    transform: scale(0.88);
+    transform-origin: top center;
+
+    box-shadow:
+        inset 0 0 8px var(--shadow-medium),
+        0 0 6px rgba(0, 0, 0, 0.35);
+
+    transition: var(--transition-fast);
+}
+
+.case-card:hover {
+    transform: scale(0.91);
+    border-color: var(--accent-2);
+    box-shadow:
+        inset 0 0 10px var(--shadow-medium),
+        0 0 12px rgba(160,230,160,0.25);
+}
+
+/* TITLE */
+.case-name {
+    background: var(--bg-mid);
+    color: var(--text-light);
+    text-align: center;
+
+    font-family: var(--font-main);
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+
+    padding: 10px 6px;
+    border-bottom: 1px solid var(--border-mid);
+
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+/* IMAGE */
+.case-img-box {
+    background: var(--green-dark);
+    padding: 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.45);
+}
+
+.case-img {
+    width: 140px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+}
+
+/* INFO */
+.case-info {
+    text-align: center;
+    padding: 8px 6px;
+}
+
+.case-info small {
+    display: block;
+    font-size: 11px;
+    color: var(--text-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+}
+
+.case-date {
+    font-size: 14px;
+    font-family: var(--font-tech);
+    color: var(--accent-2);
+    text-shadow: 0 0 6px rgba(160,220,160,0.4);
+    margin-bottom: 8px;
+}
+
+/* BUTTON */
+.case-button {
+    display: block;
+    text-align: center;
+
+    background: var(--bg-light);
+    color: var(--text-light);
+
+    font-size: 13px;
+    font-weight: bold;
+
+    padding: 8px 0;
+    margin: 0 10px 12px 10px;
+
+    text-decoration: none;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-mid);
+
+    box-shadow: inset 0 0 4px var(--shadow-medium);
+    transition: var(--transition-fast);
+}
+
+.case-button:hover {
+    background: var(--accent-2);
+    color: #072700;
+    border-color: var(--accent-3);
+
+    box-shadow: 0 0 10px rgba(160,230,160,0.35);
+}

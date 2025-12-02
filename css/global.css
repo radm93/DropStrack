@@ -1,0 +1,252 @@
+/* ============================================================
+   GLOBAL.CSS — Retro Grey-Green Interface
+   Full aesthetic: grey panels, olive accents, soft contrasts.
+============================================================ */
+
+/* ------------------------------
+   RESET
+------------------------------ */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-main);
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+/* ------------------------------
+   VARIABLES — Full retro palette
+------------------------------ */
+:root {
+
+    /* Background layers */
+    --bg-dark: #2a2e2d;
+    --bg-mid: #363b39;
+    --bg-light: #3f4543;
+    --bg-panel: #464d4a;
+
+    /* Borders */
+    --border-light: #7c8581;
+    --border-mid: #545b58;
+    --border-dark: #3a403e;
+
+    /* Text */
+    --text-light: #e6f3eb;
+    --text-mid: #cbd5cf;
+    --text-soft: #9fa7a2;
+
+    /* Olive-green accents */
+    --accent-1: #aecf92;
+    --accent-2: #9fc585;
+    --accent-3: #cfe6b9;
+
+    /* Shadows */
+    --shadow-soft: rgba(0,0,0,0.18);
+    --shadow-medium: rgba(0,0,0,0.35);
+    --shadow-hard: rgba(0,0,0,0.65);
+
+    /* Radius & speeds */
+    --radius: 3px;
+    --transition-fast: 0.12s ease-in-out;
+
+    /* Typography */
+    --font-main: "Tahoma", sans-serif;
+    --font-narrow: "Arial Narrow", sans-serif;
+    --font-tech: "Verdana", "Consolas", monospace;
+
+    /* Titles */
+    --section-title-size: 24px;
+    --section-title-weight: 700;
+}
+
+/* ------------------------------
+   GLOBAL STRUCTURE
+------------------------------ */
+.container {
+    width: 100%;
+    max-width: 1300px;
+
+}
+
+section {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0px auto;
+}
+
+/* ------------------------------
+   RETRO PANEL (Unified)
+------------------------------ */
+.panel,
+.section-inner-panel {
+    background: var(--bg-mid);
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius);
+    padding: 22px;
+
+    box-shadow:
+        inset 0 0 6px var(--shadow-medium),
+        0 0 6px rgba(160,200,150,0.06);
+
+    /* Width consistency */
+    width: 100%;
+    max-width: 1320px;
+    margin: 0px auto 10px;
+    display: block;
+}
+
+/* ------------------------------
+   SECTION TITLE
+------------------------------ */
+.block-title {
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-narrow);
+    font-size: var(--section-title-size);
+    font-weight: var(--section-title-weight);
+    color: var(--text-light);
+
+    border-bottom: 2px solid var(--accent-1);
+
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* ------------------------------
+   SUBTITLES
+------------------------------ */
+.section-subtitle {
+    text-align: center;
+    font-family: var(--font-main);
+    font-size: 14px;
+    color: var(--text-mid);
+    max-width: 900px;
+    margin: 10px auto;
+    line-height: 1.4;
+}
+
+/* ------------------------------
+   HORIZONTAL RULES
+------------------------------ */
+hr {
+    border: none;
+    border-top: 1px solid var(--accent-3);
+    margin: 20px 0;
+    opacity: 0.8;
+}
+
+/* ------------------------------
+   GRID SYSTEM
+------------------------------ */
+.grid {
+    display: grid;
+    gap: 16px;
+}
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-auto { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+
+/* ------------------------------
+   ANIMATIONS
+------------------------------ */
+.retro-glow {
+    animation: retroGlow 0.18s linear;
+}
+@keyframes retroGlow {
+    0% { box-shadow: 0 0 4px var(--shadow-medium); }
+    100% { box-shadow: 0 0 10px rgba(160, 230, 165, 0.45); }
+}
+
+.retro-pulse {
+    animation: retroPulse 0.15s ease-in-out;
+}
+@keyframes retroPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+/* ================================
+   WEEKLY DROP INFO SECTION
+================================ */
+
+.weekly-drops {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Línea divisoria retro */
+.section-divider {
+    width: 100%;
+    height: 2px;
+    background: var(--accent-2);
+    opacity: 0.35;
+    margin: 20px 0 10px 0;
+}
+
+/* Subtítulos */
+.wd-subtitle {
+    font-family: var(--font-main);
+    color: var(--text-light);
+    font-size: 18px;
+    margin: 18px 0 8px 0;
+    text-shadow: 1px 1px 3px #000;
+}
+
+/* Texto */
+.weekly-drops p {
+    font-family: var(--font-main);
+    color: var(--text-mid);
+    margin-bottom: 12px;
+    line-height: 1.45;
+}
+
+/* Listas */
+.wd-list {
+    padding-left: 18px;
+    margin-bottom: 18px;
+}
+
+.wd-list li {
+    color: var(--text-light);
+    margin-bottom: 6px;
+    font-size: 15px;
+    text-shadow: 0 0 2px #000;
+}
+
+
+.wdrop-img {
+    width: 100%;
+    max-width: 650px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 4px;
+
+    border: 1px solid var(--border-mid);
+    box-shadow:
+        inset 0 0 6px var(--shadow-medium),
+        0 0 6px rgba(160,200,150,0.06);
+}
+
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 900px) {
+    .container { padding: 0 12px; }
+    section { margin: 28px auto; }
+    .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .block-title { font-size: 20px; }
+}

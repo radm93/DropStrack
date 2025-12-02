@@ -1,0 +1,122 @@
+/* ============================================================
+   COUNTERS.CSS — Steam 2003 Retro Unified
+   ============================================================ */
+
+/* ----------------------------
+   CONTENEDOR GENERAL
+---------------------------- */
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+
+    background: var(--green-20);
+    border: 2px solid var(--border-soft);
+    border-radius: var(--radius);
+    box-shadow: 0 0 6px var(--shadow-soft);
+}
+
+/* ----------------------------
+   CADA TARJETA DE CONTADOR
+---------------------------- */
+.counter-card {
+    background: var(--green-30);
+    border: 2px solid var(--green-40);
+    border-radius: var(--radius);
+    padding: 18px;
+
+    text-align: center;
+    box-shadow: inset 0 0 9px var(--shadow-medium),
+                0 0 6px var(--shadow-soft);
+
+    transition: background var(--transition), 
+                border var(--transition), 
+                box-shadow var(--transition);
+}
+
+/* Colores según antigüedad */
+.counter-card.age-low {
+    background: var(--green-30);
+}
+
+.counter-card.age-mid {
+    background: #324940;
+}
+
+.counter-card.age-high {
+    background: #4a2f2f;
+    border-color: #703737;
+}
+
+/* ----------------------------
+   ÍCONOS PNG DE CASE / OP
+---------------------------- */
+.counter-icon {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* ----------------------------
+   TEXTO DEL TÍTULO DEL CONTADOR
+---------------------------- */
+.counter-label {
+    font-family: var(--font-narrow);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-light);
+    margin-bottom: 6px;
+}
+
+/* ----------------------------
+   TIEMPO (DÍAS — HORAS — MIN — SEG)
+---------------------------- */
+.counter-time {
+    font-family: var(--font-tech);
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--text-light);
+    letter-spacing: 1px;
+
+    padding: 8px 0;
+    background: var(--green-40);
+    border: 2px solid var(--border-soft);
+    border-radius: var(--radius);
+    box-shadow: inset 0 0 6px var(--shadow-medium);
+}
+
+/* ----------------------------
+   TÍTULO GENERAL DE ESTA SECCIÓN
+---------------------------- */
+.counter-title {
+    text-align: center;
+    font-family: var(--font-narrow);
+    font-size: var(--section-title-size);
+    font-weight: var(--section-title-weight);
+    color: var(--text-light);
+
+    margin-bottom: 18px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border-soft);
+
+    text-shadow: 0 0 4px var(--shadow-soft);
+}
+
+/* ----------------------------
+   RESPONSIVE DESIGN
+---------------------------- */
+@media (max-width: 900px) {
+    .counter-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .counter-time {
+        font-size: 18px;
+    }
+}

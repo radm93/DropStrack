@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>DropStrack — CS2 Live Player Count & Weekly Reset</title>
+
+    <!-- SEO (simple and hobby-friendly) -->
+    <meta name="description" 
+          content="DropStrack is a fan-made CS2 analytics page showing live player count, weekly drop reset timer, case release dates and other simple tools." />
+
+    <meta name="keywords" 
+          content="CS2, Counter Strike 2, CS2 cases, CS2 drop reset, CS2 timer, CS2 live players, Steam market" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="DropStrack" />
+
+    <link rel="canonical" href="https://radm93.github.io/DropStrack/" />
+
+    <!-- Open Graph (simple) -->
+    <meta property="og:title" content="DropStrack — CS2 Live Tools" />
+    <meta property="og:description" 
+          content="Live CS2 player count, weekly reset timer and case info. Fan-made, not official." />
+    <meta property="og:url" content="https://radm93.github.io/DropStrack/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/menu.css" />
+    <link rel="stylesheet" href="./css/timer.css" />
+    <link rel="stylesheet" href="./css/cases.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/cases-scroll.css" />
+    <link rel="stylesheet" href="./css/global-scroll.css" />
+
+
+
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+
+</head>
+
+<body>
+           <header id="main-header">
+            <div class="header-left">
+                <div class="header-logo">DropStrack</div>
+            </div>
+
+            <div class="header-right">
+                <div class="player-counter">
+                    <span class="pc-label">There are</span>
+                    <span id="players-current-header" class="pc-number">--</span>
+                    <span class="pc-label">players online</span>
+                </div>
+            </div>
+        </header>
+
+<div class="page-wrap">
+
+    <!-- PAGE CONTENT -->
+    <section id="timer-section-wrapper" class="container">
+
+
+    <div class="block-title">Weekly Drop Reset</div>
+
+    <!--<div class="section-subtitle">
+        Real-time countdown for the weekly CS2 drop reset.
+    </div>-->
+
+    <div id="timer-section" class="section-inner-panel"></div>
+
+</section>
+
+
+
+    <!-- ========================= -->
+    <!--        TIMER BLOCK        -->
+    <!-- ========================= -->
+    
+<section id="weekly-drops-info" class="container">
+
+    <div class="block-title">How CS2 Weekly Drops Work</div>
+
+    <div class="section-inner-panel weekly-drops-content">
+
+        <h3>Overview</h3>
+        <p>
+            Every CS2 Prime player can receive one free Weekly Care Package per week.
+            To unlock it, you only need to play official matchmaking and earn enough XP
+            to rank up once during the weekly cycle.
+        </p>
+        <br>
+        <br>
+        <h3>Requirements</h3>
+        <ul>
+            <li>Prime Status is mandatory</li>
+            <li>Play on official CS2 servers (Competitive, Casual, Deathmatch, Wingman, etc.)</li>
+            <li>Gain enough XP to reach the weekly rank-up</li>
+            <li>Only one drop per week — extra matches don’t give extra rewards</li>
+        </ul>
+        <br>
+        <br>
+        <h3>What You Get</h3>
+        <br>
+        <p>
+            Your Weekly Care Package shows 4 items, and you can pick any 2.  
+            The drop can include:
+        </p>
+        <br>
+        <ul>
+            <li>Weapon cases</li>
+            <li>Weapon skins</li>
+            <li>Graffiti / Sticker capsules</li>
+        </ul>
+        <br>
+        <p>
+            The active reward pool changes over time as Valve rotates collections and cases.
+        </p>
+        <br>
+        <br>
+        <h3>Best Choices</h3>
+        <br>
+        <ul>
+            <li>Pick the case (usually holds the highest long-term value)</li>
+            <li>Choose skins only if they belong to a valuable collection or have a good float</li>
+            <li>Avoid graffiti unless you really want it</li>
+            <li>Try to get your drop early in the week for better trading opportunities</li>
+        </ul>
+        <br>
+            <img src="assets/wdrop.png" alt="CS2 Weekly Care Package Example" class="wdrop-img">
+        <br>
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!--      CS2/CSGO CASES       -->
+<!-- ========================= -->
+<section id="cases-section-wrapper" class="container">
+
+    <div class="block-title">All CS2 & CSGO Cases</div>
+
+    <!--<div class="section-subtitle">
+        Full chronological list of every case and package, with filters.
+    </div>-->
+
+    <div id="cases-scroll-area">
+    <div id="cases-section" class="section-inner-panel"></div>
+</div>
+
+
+</section>
+
+
+   <!-- AD BLOCK 3 -->
+    <div id="ad-block-2" class="ad-container"></div>
+
+<!-- ========================= -->
+<!--      Visitas              -->
+<!-- ========================= -->
+<section class="container">
+
+    <div class="block-title"></div>
+
+    <div class="section-inner-panel" style="text-align: center;">
+
+        <a href="https://info.flagcounter.com/RkjQ">
+            <img src="https://s01.flagcounter.com/count/RkjQ/bg_363b39/txt_aecf93/border_363b39/columns_8/maxflags_250/viewers_3/labels_0/pageviews_1/flags_0/percent_0/" 
+                 alt="Flag Counter" border="0">
+        </a>
+
+    </div>
+
+</section>
+
+
+</section>
+    
+    <!-- ========================= -->
+    <!--           FOOTER          -->
+    <!-- ========================= -->
+
+    
+    <footer id="main-footer">
+                <p>
+            DropStrack is an independent analytics website. All trademarks are the property of their respective owners.
+            This site is not affiliated with, endorsed, or sponsored by Valve Corporation or Steam.
+        </p>
+        <p id="footer-year"></p>
+    </footer>
+
+
+    <!-- ========================= -->
+    <!--         JAVASCRIPT        -->
+    <!-- ========================= -->
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>

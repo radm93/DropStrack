@@ -1,0 +1,105 @@
+/* ============================================================
+   FAQ — FIX FINAL: tarjetas iguales + contador correcto
+============================================================ */
+
+/* SEPARACIÓN CON UPDATES */
+#faq-section {
+    margin-top: 24px !important;
+}
+
+/* GRID 2 columnas */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+@media (max-width: 900px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* TARJETA PRINCIPAL: ambas IGUALES */
+.faq-block {
+    background: var(--green-mid);
+    padding: 32px 28px;
+    border-radius: var(--radius);
+    border: 2px solid var(--gray-mid);
+    box-shadow: inset 0 0 12px #0a150f, 0 0 6px #0b1a11;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* 👇 Fuerza que las 2 tarjetas midan lo mismo SIEMPRE */
+    min-height: auto;
+}
+
+/* Título */
+.faq-question {
+    font-family: var(--font-narrow);
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 14px;
+    color: var(--text-light);
+}
+
+/* Texto */
+.faq-answer {
+    font-family: var(--font-main);
+    text-align: center;
+    color: var(--text-mid);
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+/* CONTENEDOR del contador */
+.faq-counter-card {
+    background: var(--green-metal);
+    border: 2px solid var(--gray-mid);
+    border-radius: var(--radius);
+
+    width: 280px;
+    padding: 22px 16px;
+
+    text-align: center;
+    box-shadow: inset 0 0 10px #091510;
+}
+
+/* ==============================================
+   IMÁGENES DE CAJA Y OPERACIÓN — MISMO ALTO
+============================================== */
+.faq-counter-img {
+    height: 140px;   /* 🔥 mismo alto EXACTO para ambas imágenes */
+    width: auto;     /* mantiene proporción original */
+    object-fit: contain;  /* evita que se deformen */
+    
+    margin: 0 auto 20px auto;
+    display: block;
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* CONTADOR ARREGLADO (UNA LÍNEA) */
+.faq-counter-time {
+    font-family: var(--font-tech);
+    font-size: 22px;
+    color: var(--text-light);
+
+    background: var(--green-dark);
+    padding: 12px;
+
+    border-radius: var(--radius);
+    border: 2px solid var(--gray-mid);
+
+    display: inline-block;
+    width: 220px;   /* 🔥 más ancho = deja de cortarse */
+    text-align: center;
+
+    white-space: nowrap;   /* 🔥 una sola línea, nunca se corta */
+    box-shadow: inset 0 0 8px #0005;
+}

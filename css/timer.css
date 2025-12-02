@@ -1,0 +1,59 @@
+/* ============================================================
+   TIMER — Retro Grey-Green UI
+============================================================ */
+
+#timer-section-wrapper {
+    width: 100%;
+    margin: 24px auto;
+}
+
+#timer-section {
+    padding: 22px;
+}
+
+
+.timer-status {
+    text-align: center;
+    color: var(--text-mid);
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.timer-grid {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+.timer-box {
+    background: var(--bg-light);
+    padding: 16px 22px;
+    min-width: 95px;
+
+    border: 2px solid var(--border-mid);
+    border-radius: var(--radius);
+
+    text-align: center;
+
+    box-shadow:
+        inset 0 0 6px var(--shadow-medium),
+        0 0 4px var(--shadow-soft);
+}
+
+.timer-number {
+    font-family: var(--font-tech);
+    font-size: 28px;
+    color: var(--accent-2);
+    text-shadow: 0 0 6px rgba(150,220,150,0.4);
+}
+
+.timer-label {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--text-soft);
+}
+
+.timer-number.tick {
+    opacity: 0.4;
+    transition: opacity 0.12s linear;
+}
