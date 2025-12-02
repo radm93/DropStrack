@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="./css/responsive.css" />
     <link rel="stylesheet" href="./css/cases-scroll.css" />
     <link rel="stylesheet" href="./css/global-scroll.css" />
+    <link rel="stylesheet" href="./css/server-status.css">
+
 
 
 
@@ -55,6 +57,30 @@
                     <span class="pc-label">players online</span>
                 </div>
             </div>
+               <div id="server-status-wrapper">
+
+    <div id="server-status-header">
+        <span>Server Status:</span>
+        <span id="server-status-summary">Loading...</span>
+        <button id="server-status-toggle">▼</button>
+    </div>
+
+    <div id="server-status-panel" class="collapsed">
+
+        <div class="ss-section">
+            <div class="ss-title">Global Services</div>
+            <ul id="ss-global-list"></ul>
+        </div>
+
+        <div class="ss-section">
+            <div class="ss-title">Regional Servers</div>
+            <ul id="ss-region-list"></ul>
+        </div>
+
+    </div>
+
+</div>
+
         </header>
 
 <div class="page-wrap">
