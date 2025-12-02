@@ -9,6 +9,8 @@ import { initCounters } from "./counters.js";
 import { initFAQ } from "./faq.js";
 import { initPlayers } from "./players.js";
 import { initCases } from "./cases.js";
+import { initCases } from "./server-status.js";
+
 
 
 /* ---------------------------------------------------------
