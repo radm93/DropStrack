@@ -1,0 +1,95 @@
+/* ============================================================
+   SERVER STATUS UI — Steam 2003 Retro Style
+============================================================ */
+
+#server-status-wrapper {
+    margin-top: 6px;
+    width: 260px;
+    font-family: var(--font-main);
+    color: var(--text-light);
+}
+
+/* Header line (clickable) */
+#server-status-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--bg-mid);
+    padding: 6px 10px;
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius);
+    cursor: pointer;
+
+    box-shadow: inset 0 0 4px #00000055;
+}
+
+#server-status-header span {
+    font-size: 13px;
+}
+
+#server-status-toggle {
+    background: none;
+    color: var(--text-light);
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Panel */
+#server-status-panel {
+    margin-top: 6px;
+    background: var(--bg-light);
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius);
+    box-shadow: inset 0 0 6px #00000055;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-out, padding 0.25s ease-out;
+    padding: 0 10px;
+}
+
+#server-status-panel.expanded {
+    padding: 10px;
+    max-height: 350px;
+}
+
+.ss-section {
+    margin-bottom: 12px;
+}
+
+.ss-title {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    color: var(--accent-2);
+}
+
+#server-status-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#server-status-panel li {
+    font-size: 13px;
+    padding: 3px 0;
+}
+
+/* Colored status dots */
+.status-online {
+    color: #00ff8b;
+    font-weight: bold;
+}
+
+.status-slow {
+    color: #ffdd55;
+    font-weight: bold;
+}
+
+.status-offline {
+    color: #ff4a4a;
+    font-weight: bold;
+}
