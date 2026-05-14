@@ -11,37 +11,54 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Poppins:wght@600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
   <script src="i18n.js"></script>
 </head>
 <body>
 
+<!-- CUSTOM CURSOR -->
 <div id="cur-ring" aria-hidden="true"></div>
 <div id="cur-dot" aria-hidden="true"></div>
+
+<!-- SCROLL BAR -->
 <div id="scroll-bar" aria-hidden="true"></div>
+
+<!-- 3D CANVAS -->
 <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
+<!-- ═══════════════════════════════════════════════════════════
+     HEADER
+     ═════════════════════════════════════════════════════════ -->
 <header id="header">
   <div class="logo-wrap">
-    <div class="logo-neon">⚡</div>
+    <div class="logo-neon" aria-hidden="true">⚡</div>
     <div>
       <div class="logo-text">DROP<span>STRACK</span></div>
       <div class="logo-sub">CS2 Drop Tracker</div>
     </div>
   </div>
 
-  <nav>
-    <a href="#drops" data-i18n="activeTitle">Active Drops</a>
-    <a href="#cases" data-i18n="allTitle">All Cases</a>
-    <a href="#how" data-i18n="howTitle">How It Works</a>
+  <nav aria-label="Main navigation">
+    <a href="#drops" class="nav-a" data-i18n="activeTitle">Drops</a>
+    <a href="#cases" class="nav-a" data-i18n="allTitle">All Cases</a>
+    <a href="#how" class="nav-a" data-i18n="howTitle">How It Works</a>
   </nav>
 
-  <button id="btn-sound" onclick="toggleSound()" class="btn-neon">🔊 SOUND</button>
+  <button id="btn-sound" onclick="toggleSound()" aria-label="Toggle sound" class="btn-neon">🔊</button>
 </header>
 
-<section id="hero">
+<!-- AD SLOT 1 -->
+<div class="ad-slot">
+  <div class="ad-ph ad-728">Advertisement 728×90</div>
+  <div class="ad-ph ad-320">Advertisement 320×50</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+     ═════════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Weekly drop countdown">
   <div class="hero-grid">
     <div class="hero-left">
       <div class="hero-label" data-i18n="eyebrow">🎁 Weekly Reset</div>
@@ -54,15 +71,27 @@
 
     <div class="hero-right">
       <div class="timer-box">
-        <div class="timer-label" data-i18n="timerLabel">Countdown to Reset</div>
+        <div class="timer-label" data-i18n="timerLabel">Countdown</div>
         <div class="timer-display">
-          <div class="timer-unit"><div class="timer-val" id="t-d">00</div><div class="timer-lbl" data-i18n="days">Days</div></div>
+          <div class="timer-unit">
+            <div class="timer-val" id="t-d">00</div>
+            <div class="timer-lbl" data-i18n="days">Days</div>
+          </div>
           <div class="timer-sep">:</div>
-          <div class="timer-unit"><div class="timer-val" id="t-h">00</div><div class="timer-lbl" data-i18n="hours">Hours</div></div>
+          <div class="timer-unit">
+            <div class="timer-val" id="t-h">00</div>
+            <div class="timer-lbl" data-i18n="hours">Hours</div>
+          </div>
           <div class="timer-sep">:</div>
-          <div class="timer-unit"><div class="timer-val" id="t-m">00</div><div class="timer-lbl" data-i18n="mins">Mins</div></div>
+          <div class="timer-unit">
+            <div class="timer-val" id="t-m">00</div>
+            <div class="timer-lbl" data-i18n="mins">Mins</div>
+          </div>
           <div class="timer-sep">:</div>
-          <div class="timer-unit"><div class="timer-val" id="t-s">00</div><div class="timer-lbl" data-i18n="secs">Secs</div></div>
+          <div class="timer-unit">
+            <div class="timer-val" id="t-s">00</div>
+            <div class="timer-lbl" data-i18n="secs">Secs</div>
+          </div>
         </div>
       </div>
 
@@ -71,21 +100,35 @@
           <span data-i18n="weekStart">Week Progress</span>
           <span id="week-pct">0%</span>
         </div>
-        <div class="week-bar-track" id="week-bar-role">
+        <div class="week-bar-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="week-bar-role">
           <div class="week-bar-fill" id="week-fill"></div>
         </div>
       </div>
 
       <div class="reset-info">
         <div><strong>GMT:</strong> Wed 01:00</div>
-        <div><strong>Local:</strong> <span id="local-time">—</span></div>
+        <div><strong><span data-i18n="localLabel">Local</span>:</strong> <span id="local-time">—</span></div>
       </div>
     </div>
   </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <svg width="24" height="40" viewBox="0 0 24 40">
+      <rect x="1" y="1" width="22" height="28" rx="11" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="10" r="2" fill="currentColor">
+        <animate attributeName="cy" values="10;20;10" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    <span data-i18n="scrollHint">scroll</span>
+  </div>
 </section>
 
-<main>
-  <!-- Stats -->
+<!-- ═══════════════════════════════════════════════════════════
+     MAIN CONTENT
+     ═════════════════════════════════════════════════════════ -->
+<main id="content">
+
+  <!-- STATS -->
   <section class="stats-section reveal">
     <div class="stats-container">
       <div class="stat-item">
@@ -100,45 +143,54 @@
       </div>
       <div class="stat-item">
         <div class="stat-icon">🎯</div>
-        <div class="stat-label" data-i18n="statItems">Items per Drop</div>
+        <div class="stat-label" data-i18n="statItems">Items/Drop</div>
         <div class="stat-value">2 of 4</div>
       </div>
       <div class="stat-item">
         <div class="stat-icon">💎</div>
-        <div class="stat-label">Prime Status</div>
+        <div class="stat-label">Prime</div>
         <div class="stat-value">$14.99</div>
       </div>
     </div>
   </section>
 
-  <!-- Active Drop Pool -->
+  <!-- ACTIVE DROP POOL -->
   <section class="cases-section reveal" id="drops">
     <div class="section-header">
       <h2 data-i18n="activeTitle">Active Drop Pool</h2>
       <p data-i18n="activeSub">Weekly Care Package Cases</p>
+      <div class="section-badge active-badge" data-i18n="activeBadge">Active Now</div>
     </div>
+
     <div class="controls">
-      <select id="sort-sel" class="sort-control">
-        <option value="default">Default</option>
-        <option value="price_asc">Price ↑</option>
-        <option value="price_desc">Price ↓</option>
-        <option value="name_asc">Name A→Z</option>
+      <select id="sort-sel" aria-label="Sort cases" class="sort-control">
+        <option value="default" data-i18n="sortDefault">Default</option>
+        <option value="price_asc" data-i18n="sortPriceAsc">Price ↑</option>
+        <option value="price_desc" data-i18n="sortPriceDesc">Price ↓</option>
+        <option value="name_asc" data-i18n="sortNameAsc">Name A→Z</option>
       </select>
+      <span class="price-note" data-i18n="priceNote">Updated every 6 hours</span>
     </div>
-    <p class="prices-status" id="prices-status"></p>
+
+    <p class="prices-status" id="prices-status" aria-live="polite"></p>
     <div class="cases-grid" id="active-cases"></div>
   </section>
 
-  <!-- All Cases -->
+  <!-- AD SLOT 2 -->
+  <div class="ad-center">
+    <div class="ad-ph ad-300">Advertisement 300×250</div>
+  </div>
+
+  <!-- ALL CASES -->
   <section class="cases-section reveal" id="cases">
     <div class="section-header">
       <h2 data-i18n="allTitle">All CS2 Cases</h2>
-      <p data-i18n="allSub">Complete Steam Market</p>
+      <p data-i18n="allSub">Complete Market</p>
     </div>
     <div class="cases-grid" id="all-cases"></div>
   </section>
 
-  <!-- How It Works -->
+  <!-- HOW IT WORKS -->
   <section class="how-section reveal" id="how">
     <div class="section-header">
       <h2 data-i18n="howTitle">How It Works</h2>
@@ -147,32 +199,40 @@
       <div class="step-card">
         <div class="step-number">01</div>
         <h3 data-i18n="s1t">Get Prime</h3>
-        <p data-i18n="s1p">Prime Status required. One-time purchase.</p>
+        <p data-i18n="s1p">Prime Status required. One-time $14.99 on Steam.</p>
       </div>
       <div class="step-card">
         <div class="step-number">02</div>
         <h3 data-i18n="s2t">Wait for Reset</h3>
-        <p data-i18n="s2p">Every Wednesday at 01:00 GMT.</p>
+        <p data-i18n="s2p">Every Wednesday at 01:00 GMT the cycle resets.</p>
       </div>
       <div class="step-card">
         <div class="step-number">03</div>
         <h3 data-i18n="s3t">Earn 5,000 XP</h3>
-        <p data-i18n="s3p">Play on official Valve servers.</p>
+        <p data-i18n="s3p">Play official Valve servers. First rank-up unlocks drop.</p>
       </div>
       <div class="step-card">
         <div class="step-number">04</div>
         <h3 data-i18n="s4t">Claim Reward</h3>
-        <p data-i18n="s4p">Choose 2 of 4 items presented.</p>
+        <p data-i18n="s4p">Choose 2 of 4 items. Appears after match or in Store.</p>
       </div>
     </div>
   </section>
+
 </main>
 
+<!-- AD SLOT 3 -->
+<div class="ad-slot" style="border-top: 1px solid rgba(255,0,110,.1)">
+  <div class="ad-ph ad-728">Advertisement 728×90</div>
+  <div class="ad-ph ad-320">Advertisement 320×50</div>
+</div>
+
 <footer>
-  <p>DropStrack — Prices via Steam Market • Not affiliated with Valve</p>
+  <p>DropStrack — <a href="https://github.com" target="_blank">GitHub</a> • Prices via Steam Market • Not affiliated with Valve</p>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" crossorigin></script>
 <script src="bg3d.js"></script>
 <script src="app.js"></script>
 
