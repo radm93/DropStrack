@@ -18,21 +18,26 @@
 </head>
 <body>
 
+<!-- CUSTOM CURSOR -->
 <div id="cur-ring" aria-hidden="true"></div>
 <div id="cur-dot" aria-hidden="true"></div>
+
+<!-- SCROLL BAR -->
 <div id="scroll-bar" aria-hidden="true"></div>
+
+<!-- 3D BACKGROUND -->
 <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
 <header id="header">
   <div class="logo-wrap">
-    <div class="logo-neon" aria-hidden="true">⚡</div>
+    <div class="logo-neon">⚡</div>
     <div>
       <div class="logo-text">DROP<span>STRACK</span></div>
       <div class="logo-sub">CS2 Drop Tracker</div>
     </div>
   </div>
 
-  <nav aria-label="Main navigation">
+  <nav>
     <a href="#drops" data-i18n="activeTitle">Drops</a>
     <a href="#cases" data-i18n="allTitle">All Cases</a>
     <a href="#how" data-i18n="howTitle">How It Works</a>
@@ -41,12 +46,7 @@
   <button id="btn-sound" onclick="toggleSound()" class="btn-neon">🔊 SOUND</button>
 </header>
 
-<!-- ANUNCIOS (ocultos temporalmente) -->
-<!-- <div class="ad-slot">
-  <div class="ad-ph ad-728">Advertisement 728×90</div>
-</div> -->
-
-<section id="hero" aria-label="Weekly drop countdown">
+<section id="hero">
   <div class="hero-grid">
     <div class="hero-left">
       <div class="hero-label" data-i18n="eyebrow">🎁 Weekly Reset</div>
@@ -76,7 +76,7 @@
           <span data-i18n="weekStart">Week Progress</span>
           <span id="week-pct">0%</span>
         </div>
-        <div class="week-bar-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="week-bar-role">
+        <div class="week-bar-track" role="progressbar" id="week-bar-role">
           <div class="week-bar-fill" id="week-fill"></div>
         </div>
       </div>
@@ -89,8 +89,61 @@
   </div>
 </section>
 
-<!-- Resto del contenido (stats, cases, how it works, footer) -->
-<!-- ... (mantengo el resto igual que tenías) -->
+<main id="content">
+  <!-- Stats -->
+  <section class="stats-section reveal">
+    <div class="stats-container">
+      <div class="stat-item"><div class="stat-icon">⏰</div><div class="stat-label" data-i18n="statReset">Resets Every</div><div class="stat-value">7 days</div></div>
+      <div class="stat-item"><div class="stat-icon">⭐</div><div class="stat-label" data-i18n="statXpLabel">XP Needed</div><div class="stat-value">5,000</div></div>
+      <div class="stat-item"><div class="stat-icon">🎯</div><div class="stat-label" data-i18n="statItems">Items/Drop</div><div class="stat-value">2 of 4</div></div>
+      <div class="stat-item"><div class="stat-icon">💎</div><div class="stat-label">Prime</div><div class="stat-value">$14.99</div></div>
+    </div>
+  </section>
+
+  <!-- Active Cases -->
+  <section class="cases-section reveal" id="drops">
+    <div class="section-header">
+      <h2 data-i18n="activeTitle">Active Drop Pool</h2>
+      <p data-i18n="activeSub">Weekly Care Package Cases</p>
+    </div>
+    <div class="controls">
+      <select id="sort-sel" class="sort-control">
+        <option value="default">Default</option>
+        <option value="price_asc">Price ↑</option>
+        <option value="price_desc">Price ↓</option>
+        <option value="name_asc">Name A→Z</option>
+      </select>
+    </div>
+    <p class="prices-status" id="prices-status"></p>
+    <div class="cases-grid" id="active-cases"></div>
+  </section>
+
+  <!-- All Cases -->
+  <section class="cases-section reveal" id="cases">
+    <div class="section-header">
+      <h2 data-i18n="allTitle">All CS2 Cases</h2>
+      <p data-i18n="allSub">Complete Market</p>
+    </div>
+    <div class="cases-grid" id="all-cases"></div>
+  </section>
+
+  <!-- How it Works -->
+  <section class="how-section reveal" id="how">
+    <div class="section-header">
+      <h2 data-i18n="howTitle">How It Works</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card"><div class="step-number">01</div><h3 data-i18n="s1t">Get Prime</h3><p data-i18n="s1p">Prime Status required.</p></div>
+      <div class="step-card"><div class="step-number">02</div><h3 data-i18n="s2t">Wait for Reset</h3><p data-i18n="s2p">Every Wednesday at 01:00 GMT.</p></div>
+      <div class="step-card"><div class="step-number">03</div><h3 data-i18n="s3t">Earn 5,000 XP</h3><p data-i18n="s3p">Play on official Valve servers.</p></div>
+      <div class="step-card"><div class="step-number">04</div><h3 data-i18n="s4t">Claim Reward</h3><p data-i18n="s4p">Choose 2 of 4 items.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>DropStrack • Prices via Steam Market • Not affiliated with Valve</p>
+</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="bg3d.js"></script>
