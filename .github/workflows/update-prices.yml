@@ -2,8 +2,8 @@ name: Update CS2 Case Prices
 
 on:
   schedule:
-    - cron: '0 */6 * * *'     # Cada 6 horas
-  workflow_dispatch:          # Permite ejecutar manualmente
+    - cron: '0 */6 * * *'     # ← Cada 6 horas (recomendado)
+  workflow_dispatch:          # Permite ejecutarlo manualmente
 
 permissions:
   contents: write
@@ -26,13 +26,13 @@ jobs:
       - name: Fetch latest prices from Steam
         run: python scripts/fetch_prices.py
 
-      - name: Commit and push updated prices
+      - name: Commit updated prices if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add api/prices.json
           if git diff --staged --quiet; then
-            echo "No changes to commit"
+            echo "No new prices to update"
           else
             git commit -m "chore: update case prices $(date -u +'%Y-%m-%d %H:%M UTC')"
             git push
