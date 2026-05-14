@@ -1,24 +1,17 @@
 # Jekyll configuration for GitHub Pages
-# This is mostly empty because we use static HTML (no Jekyll needed)
-# but having this file tells GitHub Pages to process the repo correctly
+# Configuración mínima para que funcione correctamente
 
-# Basic settings
 title: DropStrack
-description: CS2 Weekly Drop Tracker — Live countdown + real Steam Market prices
-url: https://dropstrack.example.com # Replace with your actual domain
+description: CS2 Weekly Drop Tracker — Live countdown + Steam Market prices
 
-# Build settings
-theme: minimal
+# Desactivamos el theme para evitar errores
+# Usamos HTML estático directamente
+theme: null
 markdown: kramdown
-plugins:
-  - jekyll-feed
 
-# Exclude from processing
+# Archivos a excluir
 exclude:
   - scripts/
   - .github/
-  - .gitignore
   - README.md
-
-# Enable HTTPS
-enforce_https: true
+  - GITHUB_INSTALLATION_GUIDE.md
