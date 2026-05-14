@@ -1,0 +1,36 @@
+name: Update CS2 Case Prices
+
+on:
+  schedule:
+    # Every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-prices:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch prices from Steam Market
+        run: python scripts/fetch_prices.py
+
+      - name: Commit updated prices
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add api/prices.json
+          git diff --staged --quiet || git commit -m "chore: update case prices $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
