@@ -1,211 +1,211 @@
 {
-  "updated_at": "2026-05-17T12:50:31.411853+00:00",
+  "updated_at": "2026-05-17T18:51:11.362567+00:00",
   "count": 41,
   "prices": {
     "Fever Case": {
       "lowest_price": "",
       "median_price": "$0.93",
-      "volume": "134,288"
+      "volume": "135,632"
     },
     "Gallery Case": {
       "lowest_price": "",
-      "median_price": "$1.60",
-      "volume": "9,974"
+      "median_price": "$1.62",
+      "volume": "9,716"
     },
     "Kilowatt Case": {
-      "lowest_price": "",
-      "median_price": "$0.34",
-      "volume": "129,949"
+      "lowest_price": "$0.32",
+      "median_price": "$0.35",
+      "volume": "127,762"
     },
     "Revolution Case": {
       "lowest_price": "$0.47",
       "median_price": "$0.46",
-      "volume": "130,472"
+      "volume": "109,292"
     },
     "Recoil Case": {
-      "lowest_price": "",
-      "median_price": "$0.57",
-      "volume": "48,832"
+      "lowest_price": "$0.59",
+      "median_price": "$0.59",
+      "volume": "49,430"
     },
     "Fracture Case": {
-      "lowest_price": "",
-      "median_price": "$0.96",
-      "volume": "41,418"
+      "lowest_price": "$0.97",
+      "median_price": "$0.97",
+      "volume": "39,761"
     },
     "Dreams & Nightmares Case": {
-      "lowest_price": "",
-      "median_price": "$2.08",
-      "volume": "141,631"
+      "lowest_price": "$2.14",
+      "median_price": "$2.11",
+      "volume": "140,133"
     },
     "Snakebite Case": {
-      "lowest_price": "",
+      "lowest_price": "$0.98",
       "median_price": "$0.94",
-      "volume": "14,918"
+      "volume": "14,180"
     },
     "Clutch Case": {
-      "lowest_price": "$1.09",
-      "median_price": "$1.16",
-      "volume": "9,384"
+      "lowest_price": "",
+      "median_price": "$1.15",
+      "volume": "9,076"
     },
     "Danger Zone Case": {
       "lowest_price": "",
-      "median_price": "$2.49",
-      "volume": "9,822"
+      "median_price": "$2.47",
+      "volume": "9,182"
     },
     "Prisma Case": {
-      "lowest_price": "$2.58",
-      "median_price": "$2.56",
-      "volume": "7,408"
+      "lowest_price": "",
+      "median_price": "$2.53",
+      "volume": "7,417"
     },
     "Prisma 2 Case": {
-      "lowest_price": "$2.55",
-      "median_price": "$2.55",
-      "volume": "9,605"
+      "lowest_price": "",
+      "median_price": "$2.54",
+      "volume": "9,384"
     },
     "Shadow Case": {
-      "lowest_price": "",
-      "median_price": "$3.01",
-      "volume": "2,478"
+      "lowest_price": "$2.99",
+      "median_price": "$3.07",
+      "volume": "2,343"
     },
     "Horizon Case": {
       "lowest_price": "",
-      "median_price": "$2.89",
-      "volume": "6,734"
+      "median_price": "$2.93",
+      "volume": "7,131"
     },
     "Falchion Case": {
-      "lowest_price": "",
-      "median_price": "$2.66",
-      "volume": "1,708"
+      "lowest_price": "$2.82",
+      "median_price": "$2.87",
+      "volume": "1,583"
     },
     "Gamma 2 Case": {
       "lowest_price": "",
-      "median_price": "$4.95",
-      "volume": "3,744"
+      "median_price": "$4.92",
+      "volume": "3,973"
     },
     "Revolver Case": {
-      "lowest_price": "$4.78",
-      "median_price": "$4.87",
-      "volume": "2,555"
+      "lowest_price": "$4.88",
+      "median_price": "$4.91",
+      "volume": "2,649"
     },
     "Gamma Case": {
       "lowest_price": "",
-      "median_price": "$5.20",
-      "volume": "2,873"
+      "median_price": "$5.12",
+      "volume": "2,986"
     },
     "Spectrum 2 Case": {
-      "lowest_price": "",
+      "lowest_price": "$4.66",
       "median_price": "$5.00",
-      "volume": "5,362"
+      "volume": "4,741"
     },
     "Chroma 3 Case": {
-      "lowest_price": "$5.40",
-      "median_price": "$5.66",
-      "volume": "3,384"
+      "lowest_price": "$5.65",
+      "median_price": "$5.60",
+      "volume": "3,390"
     },
     "Operation Phoenix Weapon Case": {
-      "lowest_price": "$6.39",
-      "median_price": "$6.39",
-      "volume": "1,665"
+      "lowest_price": "",
+      "median_price": "$6.35",
+      "volume": "1,552"
     },
     "Spectrum Case": {
-      "lowest_price": "$5.91",
-      "median_price": "$6.15",
-      "volume": "3,849"
+      "lowest_price": "",
+      "median_price": "$6.33",
+      "volume": "3,888"
     },
     "Chroma Case": {
-      "lowest_price": "",
-      "median_price": "$7.63",
-      "volume": "557"
+      "lowest_price": "$8.00",
+      "median_price": "$7.77",
+      "volume": "621"
     },
     "Operation Wildfire Case": {
-      "lowest_price": "",
-      "median_price": "$5.71",
-      "volume": "960"
+      "lowest_price": "$5.26",
+      "median_price": "$5.37",
+      "volume": "929"
     },
     "Chroma 2 Case": {
-      "lowest_price": "$5.86",
-      "median_price": "$6.19",
-      "volume": "2,569"
+      "lowest_price": "$6.30",
+      "median_price": "$6.34",
+      "volume": "2,525"
     },
     "Operation Broken Fang Case": {
-      "lowest_price": "",
-      "median_price": "$10.75",
-      "volume": "773"
+      "lowest_price": "$10.82",
+      "median_price": "$10.86",
+      "volume": "788"
     },
     "Operation Breakout Weapon Case": {
       "lowest_price": "",
-      "median_price": "$12.72",
-      "volume": "2,169"
+      "median_price": "$12.45",
+      "volume": "2,025"
     },
     "Huntsman Weapon Case": {
-      "lowest_price": "$13.62",
-      "median_price": "$14.15",
-      "volume": "157"
+      "lowest_price": "$13.77",
+      "median_price": "$12.43",
+      "volume": "150"
     },
     "Glove Case": {
-      "lowest_price": "$15.69",
-      "median_price": "$15.93",
-      "volume": "1,652"
+      "lowest_price": "",
+      "median_price": "$15.90",
+      "volume": "1,708"
     },
     "eSports 2013 Winter Case": {
-      "lowest_price": "$35.72",
-      "median_price": "$35.43",
-      "volume": "235"
+      "lowest_price": "",
+      "median_price": "$34.79",
+      "volume": "311"
     },
     "CS:GO Weapon Case": {
       "lowest_price": "",
-      "median_price": "$215.11",
-      "volume": "30"
+      "median_price": "$198.31",
+      "volume": "23"
     },
     "CS20 Case": {
-      "lowest_price": "$2.08",
-      "median_price": "$2.05",
-      "volume": "4,969"
+      "lowest_price": "$2.15",
+      "median_price": "$2.14",
+      "volume": "4,968"
     },
     "Shattered Web Case": {
-      "lowest_price": "",
-      "median_price": "$9.98",
-      "volume": "772"
+      "lowest_price": "$9.89",
+      "median_price": "$10.07",
+      "volume": "765"
     },
     "Operation Hydra Case": {
-      "lowest_price": "$51.41",
-      "median_price": "$51.75",
-      "volume": "55"
+      "lowest_price": "",
+      "median_price": "$49.43",
+      "volume": "57"
     },
     "Operation Vanguard Weapon Case": {
-      "lowest_price": "$7.50",
-      "median_price": "$7.76",
-      "volume": "416"
+      "lowest_price": "",
+      "median_price": "$8.35",
+      "volume": "481"
     },
     "eSports 2013 Case": {
-      "lowest_price": "$85.34",
-      "median_price": "$86.44",
-      "volume": "11"
+      "lowest_price": "$78.08",
+      "median_price": "$73.88",
+      "volume": "7"
     },
     "eSports 2014 Summer Case": {
-      "lowest_price": "$29.06",
-      "median_price": "$29.05",
-      "volume": "101"
+      "lowest_price": "$28.75",
+      "median_price": "$27.47",
+      "volume": "106"
     },
     "CS:GO Weapon Case 2": {
-      "lowest_price": "$35.05",
-      "median_price": "$34.77",
-      "volume": "67"
+      "lowest_price": "",
+      "median_price": "$32.50",
+      "volume": "90"
     },
     "CS:GO Weapon Case 3": {
       "lowest_price": "",
-      "median_price": "$20.05",
-      "volume": "102"
+      "median_price": "$22.97",
+      "volume": "104"
     },
     "Winter Offensive Weapon Case": {
-      "lowest_price": "$18.30",
-      "median_price": "$16.43",
-      "volume": "64"
+      "lowest_price": "",
+      "median_price": "$17.85",
+      "volume": "232"
     },
     "Operation Bravo Case": {
-      "lowest_price": "$94.37",
-      "median_price": "$86.93",
-      "volume": "52"
+      "lowest_price": "",
+      "median_price": "$90.54",
+      "volume": "51"
     }
   }
 }
